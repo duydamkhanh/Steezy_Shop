@@ -1,0 +1,183 @@
+.mainContent {
+    padding: 60px 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+
+    .left {
+        flex: 1;
+        // height: 100%;
+
+        .imgs {
+            height: 600px;
+            overflow-y: auto;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+            will-change: scroll-position;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            .img {
+                width: 100%;
+                height: 100%;
+                scroll-snap-align: start;
+                object-fit: fill;
+            }
+        }
+
+        .imgs::-webkit-scrollbar {
+            display: none;
+        }
+
+
+    }
+
+    .right {
+        flex: 1;
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+
+            // .category {}
+
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        .prices {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        .services {
+            background-color: #E5E5E5;
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+            // box-sizing: border-box;
+            // overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            div {
+                flex: 1;
+            }
+        }
+    }
+}
+
+.listWatched {
+    padding: 100px 0;
+
+    .content {
+        display: grid;
+        justify-content: space-between;
+        align-items: stretch;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        padding: 30px 0;
+        row-gap: 25px;
+    
+    
+    
+        .item {
+            // flex: 1;    
+            // border: 1px solid black;
+            cursor: pointer;
+            background: linear-gradient(to bottom, #f5f5f5, #c0c0c0);
+            // background-color: ;
+            
+    
+            .innerCard {
+                position: relative;
+                width: 300px;
+                // height: 300px;
+    
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+    
+                .fav {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: end;
+                    padding: 15px;
+                    color: black;
+                }
+    
+                // .action {
+                //     position: absolute;
+                //     top: 0;
+                //     right: 0;
+                //     display: flex;
+                //     height: 100%;
+                //     width: 100%;
+                //     align-items: center;
+                //     justify-content: space-between;
+                //     padding: 15px;
+                //     font-size: 20px;
+    
+                //     .act {
+                //         z-index: 100000000;
+                //         font-size: 28px;
+                //         color: white;
+    
+    
+                //     }
+                // }
+    
+                .info {
+                    // position: absolute;
+                    // bottom: 0;
+                    // left: 0;
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: start;
+                    // justify-content: end;
+                    padding: 10px;
+                    // color: black;
+                    // font-size: 1.2rem;
+                    background-color: transparent;
+    
+                    .title {
+                        font-size: 18px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                        /* Không cho phép văn bản xuống dòng */
+                        overflow: hidden;
+                        /* Ẩn phần văn bản vượt quá chiều rộng phần tử */
+                        text-overflow: ellipsis;
+                        /* Hiển thị dấu "..." khi văn bản bị cắt */
+                        width: 300px;
+                    }
+    
+                    
+                }
+            }
+        }
+    }
+}
